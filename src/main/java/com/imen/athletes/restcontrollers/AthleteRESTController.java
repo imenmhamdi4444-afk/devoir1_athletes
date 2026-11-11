@@ -18,7 +18,7 @@ import com.imen.athletes.service.AthleteService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+@CrossOrigin("*")
 public class AthleteRESTController {
 
     @Autowired
