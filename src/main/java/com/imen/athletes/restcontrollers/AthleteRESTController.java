@@ -59,4 +59,10 @@ public class AthleteRESTController {
     public List<Athlete> getAthletesByEquipeId(@PathVariable("codeEquipe") Long codeEquipe) {
         return athleteService.findByEquipeCodeEquipe(codeEquipe);
     }
+
+    // GET athletes by name contains (Atelier 07)
+    @GetMapping("/athletesByName/{nom}")
+    public List<Athlete> findByNomCompletContains(@PathVariable("nom") String nom) {
+        return athleteService.findByNomCompletContains(nom);
+    }
 }
